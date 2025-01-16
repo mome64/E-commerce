@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.amazon-header {
+  background-color: rgb(19, 25, 33);
   color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+.amazon-logo {
+  width: 100px;
+  margin-top: 5px;
+}
+.amazon-header-middle-section {
+  flex: 1;
+  max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  flex: 1;
+  width: 0;
+  font-size: 16px;
+  height: 38px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-button {
+  background-color: rgb(254, 189, 105);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  flex-shrink: 0;
+}
+.search-icon {
+  height: 22px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+.amazon-header-right-section {
+  display: flex;
+  align-items: center;
+}
+
+/* General container styling */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create 3 equal columns */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  width: 80%;
+  margin: 50px 10px; /* Center the element horizontally */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visual appeal */
+  border-radius: 8px; /* Round corners for a modern look */
+  padding: 20px; /* Add padding for spacing inside the container */
+  background-color: #fff;
+}
+
+/* Product image styling */
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Ensure image scales without distortion */
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0; /* Separate image from other elements */
+}
+
+/* Text styling */
+p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333; /* Neutral color for text */
+  margin: 15px 0; /* Add spacing between paragraphs */
+}
+
+/* Dropdown styling */
+select {
+  width: 100px;
+  height: 35px;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc; /* Add border for better visibility */
+  border-radius: 4px; /* Round corners */
+  font-size: 16px;
+  color: #333;
+  background-color: #fff; /* Set background for consistency */
+  cursor: pointer;
+  outline: none; /* Remove focus outline */
+  transition: border-color 0.3s ease; /* Add focus effect */
+}
+
+select:focus {
+  border-color: #f0c14b; /* Highlight on focus */
+}
+
+/* Button styling */
+button {
+  display: block;
+  width: 100%;
+  background-color: #f0c14b;
+  border: 1px solid #a88734; /* Simplify border */
+  outline: none;
+  margin-top: 10px;
+  padding: 12px; /* Adjust padding for better sizing */
+  color: #111;
+  border-radius: 12px;
+  font-size: 18px; /* Adjust font size for better scaling */
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effect */
+}
+
+button:hover {
+  background-color: #ddb347; /* Slightly darker shade on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Remove lift effect when clicked */
+  background-color: #c7963e; /* Slightly darker shade for active state */
 }
