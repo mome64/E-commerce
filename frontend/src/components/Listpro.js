@@ -16,7 +16,7 @@ export default function Listpro({ products }) {
       <select>
         <option value="1">1</option>
       </select>
-      <button>Add To Cart</button>
+      <button className="addcart">Add To Cart</button>
     </div>
   );
 }
